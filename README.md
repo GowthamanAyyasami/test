@@ -8,11 +8,23 @@ This Article explains the steps for migrating the test project to EKS environmen
 
 * [Step 3: Change RTF Version in banner.txt](#change-rtf-version-banner)
 
-* [Step 4: Open the pom.xml of the Test Project](#edit-test-script-class)
+* [Step 4: Open the pom.xml of the Test Project](#edit-pom.xml-testproject)
 
-* [Step 5: Edit the script class](#web-location-strategies)
+* [Step 5: Edit the script class](#edit-test-script-class)
 
-* [Test Dependency](#test-dependency)
+* [Step 6: Add the properties](#add-properties-elementrepo)
+
+* [Step 7: Update config.yml](#update-config.yml)
+
+* [Step 8: Update the docker file](#update-docker-file)
+
+* [Step 9: Update the rapidTestConfig.properties](#update-rapidTestConfig-properties)
+
+* [Step 10: Create a job.yml](#create-job.yml)
+
+* [Step 5: Edit the script class](#edit-test-script-class)
+
+* [Step 5: Edit the script class](#edit-test-script-class)
 
 ## Step 1: Import the projects <a name="import-projects"></a>
 Import the test project and the RapidTestBoot Project to be migrated
@@ -52,55 +64,48 @@ shellFilePath)** method where the Shell script needs to be executed.
 
 * The sleep time can be provided if required and the key for sleep time is "SLEEP_TIME=" followed by the value.
 
-![](./images/media/image1.png)
+* ![](./images/media/image1.png)
 
-Step 6: Add the properties required for execute shell to read the
-properties from element repository
+## Step 6: Add the properties <a name="add-properties-elementrepo"></a>
+Add the properties required for execute shell to read the
+properties from element repository in the constants file.
 
-in the constants file.
+![](./images/media/image2.png)
 
-![](./images/media/image2.png){width="5.807786526684165in"
-height="1.5095352143482064in"}
+## Step 7: Update config.yml <a name="update-config.yml"></a>
+Update the config.yml file in .circleci as in the rtf blank project
 
-Step 7: Update the config.yml file in .circleci as in the rtf blank
-project
+## Step 8: Update the docker file <a name="update-docker-file"></a>
+Also update the Dockerfile as in the rtf blank project
 
-Step 8: Also update the Dockerfile as in the rtf blank project
+## Step 9: Update the rapidTestConfig.properties <a name="update-rapidTestConfig-properties"></a>
 
-Step 9: Update the rapidTestConfig.properties
+* Modify RTF db configuration sections in the below format.
 
-\- Modify RTF db configuration sections in the below format.
+	spring.rtf.url=jdbc:postgresql://\${RTF_POSTGRES_HOST:localhost}:\${RTF_POSTGRES_PORT:5433}/\${RTF_POSTGRES_DATABASE:postgres}
 
-> spring.rtf.url=jdbc:postgresql://\${RTF_POSTGRES_HOST:localhost}:\${RTF_POSTGRES
->
-> \_PORT:5433}/\${RTF_POSTGRES_DATABASE:postgres}
+	spring.rtf.username=\${RTF_POSTGRES_USER:users}
 
-spring.rtf.username=\${RTF_POSTGRES_USER:users}
+	spring.rtf.password=\${RTF_POSTGRES_PASSWORD:password}
 
-spring.rtf.password=\${RTF_POSTGRES_PASSWORD:password}
+	spring.rtf.platform=postgresql
 
-spring.rtf.platform=postgresql
+## Step 10: Create a job.yml <a name="create-job.yml"></a>
 
-Step 10: Create a job.yml
-
-\- Should create a job.yml for the RTF job about to run. A sample is
+Should create a job.yml for the RTF job about to run. A sample is
 given.
 
-\- Replace blank project contents mentioned below with that of your
+Replace blank project contents mentioned below with that of your
 project in job.yml.
 
 metadata.name
-
 metadata.labels.app
-
 spec.template.metadata.labels.app
-
 spec.template.spec.containers.name
-
 spec.template.spec.containers.image
 
-\- Add the environment variables required for your project after line 59
+Add the environment variables required for your project after line 59
 in job.yml in the same format of above variables.
 
-\- NOTE: DO NOT MAKE ANY CHANGES TO THE ENVIRONMENT VARIABLES ON OR
-ABOVE LINE 59.
+*NOTE: DO NOT MAKE ANY CHANGES TO THE ENVIRONMENT VARIABLES ON OR
+ABOVE LINE 59.*
