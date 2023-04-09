@@ -44,11 +44,9 @@ to the latest.
 Open the Test script class and call the **executeShell(String
 shellFilePath)** method where the Shell script needs to be executed.
 
-	a.  The argument to this method is the shell file path, which is
-    		provided in the Element Repository file.
+	* The argument to this method is the shell file path, which is provided in the Element Repository file.
 
-	b.  The job yaml file path is provided in the element Element Repository
-    		file.
+	* The job yaml file path is provided in the element Element Repository file.
 
 	c.  The log directory can be provided if required and the key for log
     		directory is "LOG_FILE=" followed by the value.
