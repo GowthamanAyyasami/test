@@ -6,11 +6,11 @@ This Article explains the steps for migrating the test project to EKS environmen
 
 * [Step 2: Open the pom.xml of the RapidTestBoot](#edit-pom.xml-rapidtestboot)
 
-* [Confirm whether the page is loaded](#confirm-whether-the-page-is-loaded)
+* [Step 3: Change RTF Version in banner.txt](#change-rtf-version-banner)
 
-* [Object Repositories](#object-repositories)
+* [Step 4: Open the pom.xml of the Test Project](#edit-test-script-class)
 
-* [Web Location Strategies](#web-location-strategies)
+* [Step 5: Edit the script class](#web-location-strategies)
 
 * [Test Dependency](#test-dependency)
 
@@ -32,31 +32,31 @@ tag
 			<version>1.12.115</version>
 		</dependency>
 
-Step 3: If there is any change in the RTF version, then change the
+## Step 3: Change RTF Version in banner.txt <a name="change-rtf-version-banner"></a>
+If there is any change in the RTF version, then change the
 version of RTF in the banner.txt in src/main/resources
 
-Step 4: Open the pom.xml of the test project and change the RTF version
+## Step 4: Open the pom.xml of the Test Project <a name="edit-pom.xml-testproject"></a>
+Open the pom.xml of the test project and change the RTF version
 to the latest.
 
-Step 5: Open the Test script class and call the **executeShell(String
-shellFilePath)** method where the
+## Step 5: Edit the script class <a name="edit-test-script-class"></a>
+Open the Test script class and call the **executeShell(String
+shellFilePath)** method where the Shell script needs to be executed.
 
-Shell script needs to be executed.
+	a.  The argument to this method is the shell file path, which is
+    		provided in the Element Repository file.
 
-a.  The argument to this method is the shell file path, which is
-    provided in the Element Repository file.
+	b.  The job yaml file path is provided in the element Element Repository
+    		file.
 
-b.  The job yaml file path is provided in the element Element Repository
-    file.
+	c.  The log directory can be provided if required and the key for log
+    		directory is "LOG_FILE=" followed by the value.
 
-c.  The log directory can be provided if required and the key for log
-    directory is "LOG_FILE=" followed by the value.
+	d.  The sleep time can be provided if required and the key for sleep
+    		time is "SLEEP_TIME=" followed by the value.
 
-d.  The sleep time can be provided if required and the key for sleep
-    time is "SLEEP_TIME=" followed by the value.
-
-> ![](./images/media/image1.png){width="6.268055555555556in"
-> height="2.2694444444444444in"}
+![](./images/media/image1.png)
 
 Step 6: Add the properties required for execute shell to read the
 properties from element repository
