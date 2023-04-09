@@ -1,9 +1,25 @@
-## Steps to migrate to EKS environment
+# Steps to migrate to EKS environment
 
-Step 1: Import the test project and the RapidTestBoot Project to be
-migrated
+This Article explains the steps for migrating the test project to EKS environment.
 
-Step 2: Open the pom.xml of the RapidTestBoot project and change the RTF
+* [Step 1: Import the projects](#import-projects)
+
+* [Step 2: Open the pom.xml of the RapidTestBoot](#edit-pom.xml-rapidtestboot)
+
+* [Confirm whether the page is loaded](#confirm-whether-the-page-is-loaded)
+
+* [Object Repositories](#object-repositories)
+
+* [Web Location Strategies](#web-location-strategies)
+
+* [Test Dependency](#test-dependency)
+
+## Step 1: Import the projects <a name="follow-page-object-model"></a>
+Import the test project and the RapidTestBoot Project to be migrated
+
+## Step 2: Open the pom.xml of the RapidTestBoot <a name="edit-pom.xml-rapidtestboot"></a>
+
+Open the pom.xml of the RapidTestBoot project and change the RTF
 version to the latest.
 
 Currently it is 2.12. Also add the below dependency in the dependencies
