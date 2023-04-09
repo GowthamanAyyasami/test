@@ -44,15 +44,13 @@ to the latest.
 Open the Test script class and call the **executeShell(String
 shellFilePath)** method where the Shell script needs to be executed.
 
-	* The argument to this method is the shell file path, which is provided in the Element Repository file.
+* The argument to this method is the shell file path, which is provided in the Element Repository file.
+	
+* The job yaml file path is provided in the element Element Repository file.
 
-	* The job yaml file path is provided in the element Element Repository file.
+* The log directory can be provided if required and the key for log directory is "LOG_FILE=" followed by the value.
 
-	c.  The log directory can be provided if required and the key for log
-    		directory is "LOG_FILE=" followed by the value.
-
-	d.  The sleep time can be provided if required and the key for sleep
-    		time is "SLEEP_TIME=" followed by the value.
+* The sleep time can be provided if required and the key for sleep time is "SLEEP_TIME=" followed by the value.
 
 ![](./images/media/image1.png)
 
