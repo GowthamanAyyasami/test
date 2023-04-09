@@ -25,13 +25,12 @@ version to the latest.
 Currently it is 2.12. Also add the below dependency in the dependencies
 tag
 
-    \<!\-- https://mvnrepository.com/artifact/com.amazonaws/aws-java-sdk-sts
-    \--\>
-    \<dependency\>
-    \<groupId\>com.amazonaws\</groupId\>
-    \<artifactId\>aws-java-sdk-sts\</artifactId\>
-    \<version\>1.12.115\</version\>
-    \</dependency\>
+    <!-- https://mvnrepository.com/artifact/com.amazonaws/aws-java-sdk-sts -->
+		<dependency>
+			<groupId>com.amazonaws</groupId>
+			<artifactId>aws-java-sdk-sts</artifactId>
+			<version>1.12.115</version>
+		</dependency>
 
 Step 3: If there is any change in the RTF version, then change the
 version of RTF in the banner.txt in src/main/resources
