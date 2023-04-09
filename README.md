@@ -22,10 +22,6 @@ This Article explains the steps for migrating the test project to EKS environmen
 
 * [Step 10: Create a job.yml](#create-job.yml)
 
-* [Step 5: Edit the script class](#edit-test-script-class)
-
-* [Step 5: Edit the script class](#edit-test-script-class)
-
 ## Step 1: Import the projects <a name="import-projects"></a>
 Import the test project and the RapidTestBoot Project to be migrated
 
