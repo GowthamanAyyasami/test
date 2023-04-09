@@ -14,7 +14,7 @@ This Article explains the steps for migrating the test project to EKS environmen
 
 * [Test Dependency](#test-dependency)
 
-## Step 1: Import the projects <a name="follow-page-object-model"></a>
+## Step 1: Import the projects <a name="import-projects"></a>
 Import the test project and the RapidTestBoot Project to be migrated
 
 ## Step 2: Open the pom.xml of the RapidTestBoot <a name="edit-pom.xml-rapidtestboot"></a>
