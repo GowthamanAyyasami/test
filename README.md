@@ -2,7 +2,7 @@
 
 This Article explains the steps for migrating the test project to EKS environment.
 
-* [Step 1: Job Yaml Execution](#job-yaml-Execution)
+* [Step 1: Job Yaml Execution](#job-yaml-Execution-head)
 
 * [Step 2: Deploy Logs](#deploy-logs)
 
@@ -16,7 +16,7 @@ This Article explains the steps for migrating the test project to EKS environmen
 
 * [Step 7: Create a job.yml](#create-job.yml)
 
-## Step 1: Job Yaml Execution <a name="job-yaml-Execution"></a>
+## Step 1: Job Yaml Execution <a name="job-yaml-Execution-head"></a>
 Open the Test script class and call the **executeShell(String
 shellFilePath)** method where the Shell script needs to be executed.
 
