@@ -4,7 +4,7 @@ This Article explains the steps for migrating the test project to EKS environmen
 
 * [Step 1: Job Yaml Execution](#job-yaml-Execution-head)
 
-* [Step 10: Job Yaml Execution](#steps-jobyaml-execution)
+* [Step 1: Job Yaml Execution](#steps-jobyaml-execution)
 
 * [Step 2: Deploy Logs](#deploy-logs)
 
@@ -18,7 +18,7 @@ This Article explains the steps for migrating the test project to EKS environmen
 
 * [Step 7: Create a job.yml](#create-job.yml)
 
-## Step 10: Deploy Logs <a name="steps-jobyaml-execution"></a>
+## Step 1: Job Yaml Execution <a name="steps-jobyaml-execution"></a>
 For executing Job Execution, there are two mandatory arguments and two non-mandatory arguments.
 
 * The first argument to this job execution shell is the shell file path, which is provided in the Element Repository file.
