@@ -42,6 +42,8 @@ For executing the deploy log shell, there are four mandatory parameters and one 
 
 * The last parameter is optional and the key for log directory is "LOG_FILE=" followed by the value.
 
+![](./images/media/image3.png)
+
 ## Step 3: Add the properties <a name="add-properties-elementrepo"></a>
 Add the properties required for execute shell to read the
 properties from element repository in the constants file.
