@@ -2,8 +2,6 @@
 
 This Article explains the steps for migrating the test project to EKS environment.
 
-* [Step 1: Job Yaml Execution](#job-yaml-Execution-head)
-
 * [Step 1: Job Yaml Execution](#steps-jobyaml-execution)
 
 * [Step 2: Deploy Logs](#deploy-logs)
