@@ -28,7 +28,7 @@ shellFilePath)** method where the Shell script needs to be executed.
 
 * The sleep time can be provided if required and the key for sleep time is "SLEEP_TIME=" followed by the value.
 
-* ![](./images/media/image1.png)
+* ![](./images/media/1_jobyaml.png)
 
 ## Step 2: Deploy Logs <a name="deploy-logs"></a>
 For executing the deploy log shell, there are four mandatory parameters and one non mandatory 
@@ -42,13 +42,13 @@ For executing the deploy log shell, there are four mandatory parameters and one 
 
 * The last parameter is optional and the key for log directory is "LOG_FILE=" followed by the value.
 
-![](./images/media/image3.png)
+* ![](./images/media/2_deploylogs.png)
 
 ## Step 3: Add the properties <a name="add-properties-elementrepo"></a>
 Add the properties required for execute shell to read the
 properties from element repository in the constants file.
 
-![](./images/media/image2.png)
+![](./images/media/3_elementrepo.png)
 
 ## Step 4: Update config.yml <a name="update-config.yml"></a>
 Update the config.yml file in .circleci as in the rtf-blankproject-eks -> develop branch
