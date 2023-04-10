@@ -17,12 +17,11 @@ This Article explains the steps for migrating the test project to EKS environmen
 * [Step 7: Create a job.yml](#create-job.yml)
 
 ## Step 1: Job Yaml Execution <a name="job-yaml-Execution-head"></a>
-Open the Test script class and call the **executeShell(String
-shellFilePath)** method where the Shell script needs to be executed.
+For executing Job Execution, there are two mandatory arguments and two non-mandatory arguments.
 
-* The argument to this method is the shell file path, which is provided in the Element Repository file.
+* The first argument to this job execution shell is the shell file path, which is provided in the Element Repository file.
 	
-* The job yaml file path is provided in the element Element Repository file.
+* The second argument is the job yaml file path which is provided in the element Element Repository file.
 
 * The log directory can be provided if required and the key for log directory is "LOG_FILE=" followed by the value.
 
